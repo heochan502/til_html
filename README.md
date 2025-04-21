@@ -50,7 +50,11 @@
 
 ### 2-3. Live Server 세팅( 일부 실행 오류 발견됨 )
 
-- 파악 후 업데이트 예정
+- 윈도우 검색 > 시스템 환경 변수 편집 > 환경변수,,
+- Admistrator에 대한 사용자 변수
+  - path 내용 추가 : `C:\Windows\System32`
+- 시스템 변수
+  - path 내용 추가 : `C:\Windows\System32`
 
 # WAS( Web Application Server )
 
@@ -153,15 +157,26 @@ common,css(공통적용), header, css, footer, css 등 영역별로 생성
     <title>나의 til</title>
   </head>
   <body>
-    <!-- 전체 레이아웃 -->
+    <!-- 전체 레이아웃  -->
     <div>
       <!-- 상단 -->
-      <haeder>
+      <header>
         <div></div>
-      </haeder>
+      </header>
       <!-- 메인 -->
       <main>
-        <div></div>
+        <div>
+          <!-- Event -->
+          <div></div>
+          <!-- Tour -->
+          <div></div>
+          <!-- Trip -->
+          <div></div>
+          <!-- Ticket -->
+          <div></div>
+          <!-- Live -->
+          <div></div>
+        </div>
       </main>
       <!-- 하단 -->
       <footer>
@@ -240,6 +255,37 @@ git config --global user.email "id@gmail.com"
 ```
 
 ## 2. Git 명령어 실행하기
+
+- Git 프로젝트 관리 시작하기
+
+```bash
+git init
+```
+
+- Git 의 현재 상태 알아내기
+
+```bash
+git status
+```
+
+- Git 에서 파일 및 폴더 전체 추척하기 설정
+
+```bash
+git add .
+```
+
+- Git 작업내역 메모하기
+
+```bash
+git commit
+```
+
+- 새로운 작업단위, 즉 브랜치 생성하기
+
+```bash
+git branch header
+git switch header
+```
 
 ## 3. GitHub 관리
 
