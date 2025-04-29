@@ -2,6 +2,8 @@
 
 /* @import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+
+
 @font-face {
   font-family: "Ownglyph_ParkDaHyun";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2")
@@ -10,7 +12,6 @@
   font-style: normal;
 } */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-/* @import url("header.css");  헤더 참조 방법 이긴하지만 index에서 불러오는 걸 추천*/
 
 * {
   margin: 0;
@@ -100,3 +101,94 @@ body {
   margin: 0 auto;
   /* background-color: skyblue; */
 }
+
+.header {
+  width: 100%;
+  height: 163px;
+  background-color: #ffffff; /*단축키 bc 각명령어 단어 앞에꺼 쓰면 나옴*/
+  border-bottom: 1px solid #ebebeb;
+}
+
+.header_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /*여백을 사이에 넣어라*/
+  align-items: center;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.header_top_left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo > a > img {
+  width: 150px;
+  height: 38px;
+}
+/*
+.logo img{
+
+} */
+.search {
+}
+.search_form {
+  display: flex;
+  align-items: center;
+  width: 460px;
+  height: 410;
+}
+.search_form_word {
+  width: calc(100% - 50px);
+  height: 50px;
+  background-color: pink;
+  border: none;
+  border-radius: 25px 0px 0px 25px ;
+  padding-left: 15px;
+}
+.search_form_button {
+  height: 50px;
+  background-color: rgb(107, 160, 209);
+  border: none;
+  border-radius: 0px 25px 25px 0px ;
+}
+
+/* .search_form input[type="속성값"] 앞의 속성값이랑 같은거 찾아라 
+{
+
+} */
+
+.header_top_right {
+}
+.member {
+  display: flex;
+}
+.header_bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.header_bottom_nav {
+}
+.nav {
+  display: flex;
+}
+.header_bottom_eventmenu {
+}
+.cupon {
+  display: flex;
+  align-items: center;
+}
+
+.cupon > li > a {
+  display: flex;
+  align-items: center;
+}
+
+/* .box_wrap {
+  background-color: yellowgreen;
+}
+div {
+  background-color: orange;
+} */

@@ -1,54 +1,154 @@
+<!-- 얘는 홈페이지 1장을 뜻하고 웹사이트는 한 폴더 단위 그자체 웹사이트 - 웹서비스 */-->
+<!-- 첫페이지의 파일명 및 확장자는 전세계에서 약속된 것이라고 보자 그것이 index.html-->
+<!--의미없는 공백은 html에 취약하다 왠만하면 쓰지마라 공백을 -->
+<!--각 영역의 내용과 기능을 web browser에게 알림 역할 -- <태그 속성="값"> 데이터 </태그> <tag attribute="value"> data </tag> -->
+<!--node.js 도 version이 있습니다. version에 따라서 실행 중 결과가 영향을 받습니다. 회사에서는 최신버전을 싫어함 
+    회사에서는 서비스 진행시, version을 좋아합니다. NVM (node version manager)-->
+
+<!-- <html>
+  <title>햐햐햐햐ㅑ</title>
+  <head>
+    <p class="text-[18]">추천좀</p>
+  </head>
+</html>
+-->
 <!DOCTYPE html>
 <html lang="ko">
+  <!-- 이사이트는 영어(en)로만들어짐 -->
+  <!-- head는 문서에서 안보이는 부분 문서의 지향점같이 이문서가 어떤거다라는 것을 표현 문서 제목같은느낌// boby가 내용의 상세표기 -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>나의 til</title>
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/hearder.css" />
+
+    <!-- stylesheet 선언하고 파일 경로 지정해주면서 style 불러오기 -->
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/header.css" />
+    <!-- 위에 헤더 불러오는 순서 중요 위의 방식대로 하나씩 불러온다 -->
+    <!--  스타일 넣는 방식 2. style 함수로 따로 뺴서 
+    <style> 
+      div {
+      border : 5px solid black;
+      }
+    </style> -->
+    <!-- <style>
+      .box_wrap {
+        background-color: yellowgreen;
+      }
+      div {
+        background-color: orange;
+      }
+    </style> -->
   </head>
   <body>
-    <!-- 전체 레이아웃  -->
+    <style>
+      #gogo {
+        background-color: brown;
+      }
+      .box_wrap {
+        background-color: hotpink;
+      }
+      div {
+        background-color: rgb(255, 255, 255) !important;
+      }
+
+      .box_wrap {
+        display: block;
+        /* border: 3px solid rgb(211, 62, 62); */
+      }
+      .clearboth::after
+      /*  .box_wrap::after box_wrap의 영역안의 마지막 부분을 after
+      맨처음을 before로 지정 가능하다. float: left;가 있으면 앞으로 안가고 맨뒤로 가게 된다 새로운 것은 무조건 왼쪽으로 붙여서*/ {
+        content: "";
+        display: block;
+        width: 100%;
+        clear: both;
+        /* clear:both 는 float : left 를 못붙이게 하는거 */
+      }
+      .box {
+        display: none;
+        width: 50px;
+        border: 3px solid black;
+        float: left;
+      }
+
+      ul > li > a {
+        background-color: rgb(255, 255, 255);
+      }
+      ul a {
+        background-color: red;
+      }
+    </style>
+
+    <!-- <ul class="menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">css</a></li>
+      <li><a href="#">JS</a></li>
+    </ul>
+
+    <div id="gogo" class="box_wrap clearboth hi" style="background-color: red">
+      안녕 -->
+    <!-- 위에 클래스명을 띄어쓰기하고 두개 적으면 둘다 적용됨 -->
+    <!-- <div class="box">A</div>
+      <div class="box">
+        BBB
+        <div class>목록</div>
+        <div class>목록</div>
+      </div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+    </div> -->
+
+    <!-- 바디는 땅이다 // 구조를 나누는게 중요하고 구조를 나눠야 분업이가능하다 -->
+    <!-- 전체 레이아웃 -->
+    <!-- 직접 inline 방식 <div class="wrap" style="border: 5px solid black" > -->
     <div class="wrap">
+      <!--내용의 영역구분-->
       <!-- 상단 -->
       <header class="header">
+        <!-- 위에 헤더로 여기부분이 상단이라는걸 알려줌. 웹브라우저의 상단부분이라는걸 명시하고가는거 -->
         <div class="layout">
           <!-- 상단의 위 -->
           <div class="header_top">
             <div class="header_top_left">
+              <!-- 로고 및 검색 배치 -->
               <!-- 로고 -->
               <div class="logo">
-                <a href="http://www.interpark.com" target="_blank">
-                  <img src="images/logo.svg" alt="로고" title="인터파크" />
+                <a href="https://nol.interpark.com/" target="_blank">
+                  <img src="images/logo.svg" alt="로고" title="인터파크"/>
                 </a>
               </div>
-              <!-- 제품 검색 -->
+              <!-- 제품검색 -->
               <div class="search">
-                <!-- 제품 검색 api 연동 -->
-                <form class="search_from">
-                  <input
-                    class="search_from_word"
+                <!-- 제품 검색 API 연동  -->
+                <!-- 검색 -->
+                <!-- 문자열 keyword 라는 변수는 사과라는걸 전송하는거 다른 웹페이지에서 keyword 가 있음 그걸 검색하는 방식 -->
+                <form
+                  class="search_form"
+                  action="good-search.html"
+                  method="get"
+                >
+                  <input class="search_form_word"
                     type="text"
+                    name="keyword"
                     placeholder="제품을 검색해 주세요."
                   />
-                  <input
-                    class="search_from_botton"
-                    type="submit"
-                    value="검색"
-                  />
+                  <input class="search_form_button" type="submit" value="검색" />
                 </form>
               </div>
             </div>
             <div class="header_top_right">
+              <!-- 회원관련메뉴 -->
               <ul class="member">
                 <li><a href="#">로그인</a></li>
                 <li><a href="#">회원가입</a></li>
               </ul>
             </div>
           </div>
-          <!-- 상단의 아래 -->
           <div class="header_bottom">
+            <!-- 상단의 아래 -->
             <div class="header_bottom_nav">
+              <!-- 고정 메뉴 -->
               <ul class="nav">
                 <li><a href="#">홈</a></li>
                 <li><a href="#">투어</a></li>
@@ -56,6 +156,7 @@
               </ul>
             </div>
             <div class="header_bottom_eventmenu">
+              <!-- 이벤트 메뉴 -->
               <ul class="cupon">
                 <li>
                   <a href="#">
@@ -69,16 +170,19 @@
                 </li>
                 <li>
                   <a href="#"
-                    >국내여행쿠폰
-                    <img
+                    >국내여행쿠폰<img
                       src="images/badge_hot.svg"
                       alt="국내여행쿠폰"
                       title="국내여행쿠폰"
                     />
                   </a>
                 </li>
-                <li><a href="#">여행혜택존</a></li>
-                <li><a href="#">여행준비</a></li>
+                <li>
+                  <a href="#">여행혜택존 </a>
+                </li>
+                <li>
+                  <a href="#">여행준비</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -86,17 +190,20 @@
       </header>
       <!-- 메인 -->
       <main>
+        <!-- 위에 헤더로 여기부분이 메일이라는걸 알려줌. 웹브라우저의 메인부분이라는걸 명시하고가는거 -->
         <div class="layout">
-          <!-- Banner -->
+          <!-- event -->
+          <!-- <div></div> -->
+          <!-- banner -->
           <div class="banner">
-            <div class="banner-list">
-              <a href="#">
-                <img src="images/v1.png" alt="banner" title="배너" />
+            <div class="banner_list">
+              <a href="#"
+                ><img src="images/v1.png" alt="banner" title="배너1" />
               </a>
             </div>
-            <div class="banner-list">
-              <a href="#">
-                <img src="images/v2.jpg" alt="banner2" title="배너2" />
+            <div class="banner_list">
+              <a href="#"
+                ><img src="images/v2.jpg" alt="banner" title="배너2" />
               </a>
             </div>
             <button class="slide_bt banner_left">
@@ -106,14 +213,14 @@
               <img src="images/slider_arrow.svg" alt="right" title="right" />
             </button>
           </div>
-          <!-- Tour -->
+          <!-- tour -->
           <div class="tour">
             <div class="section_top">
               <h2 class="section_title">투어 특가</h2>
               <span class="section_desc">마감임박! 금주의 특가 여행 추천</span>
             </div>
             <div class="section_list">
-              <!-- Start 목록영역 -->
+              <!-- start 목록영역 -->
               <div class="section_category">
                 <ul class="section_category_bts">
                   <li><button>마감임박</button></li>
@@ -124,70 +231,74 @@
                 </ul>
               </div>
               <div class="section_slide">
-                <!-- Start추후 JSON 데이터 연동으로 변경 예정 -->
-                <div class="item">
-                  <a href="#">
-                    <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
-                    <span>나트랑</span>
-                    <span>[10%쿠폰] 아동 동반 가족여행 강력 추천</span>
-                    <p>
-                      방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성
-                      윈덤 좀티엔 파타야,마사지 2시간,핵심일정 포함
-                    </p>
-                    <span><b>109,000</b>원~</span>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="#">
-                    <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
-                    <span>나트랑</span>
-                    <span>[10%쿠폰] 아동 동반 가족여행 강력 추천</span>
-                    <p>
-                      방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성
-                      윈덤 좀티엔 파타야,마사지 2시간,핵심일정 포함
-                    </p>
-                    <span><b>109,000</b>원~</span>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="#">
-                    <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
-                    <span>나트랑</span>
-                    <span>[10%쿠폰] 아동 동반 가족여행 강력 추천</span>
-                    <p>
-                      방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성
-                      윈덤 좀티엔 파타야,마사지 2시간,핵심일정 포함
-                    </p>
-                    <span><b>109,000</b>원~</span>
-                  </a>
-                </div>
-                <!-- End 추후 JSON 데이터 연동으로 변경 예정 -->
+                <!-- start 추후 json 데이터 연동으로 변경 예정 -->
+                <a class="item" href="#">
+                  <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
+                  <span>나트랑</span>
+                  <span>[10%쿠폰] 아동 동반 가족여행 강력 추천</span>
+                  <p>
+                    방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성 윈덤
+                    좀티엔 파타야,마사지 2시간,핵심일정 포함
+                  </p>
+                  <span><b>109,000</b>원~</span>
+                </a>
+                <a class="item" href="#">
+                  <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
+                  <span>나트랑</span>
+                  <span>[10%쿠폰] 아동 동반 가족여행 강력 추천</span>
+                  <p>
+                    방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성 윈덤
+                    좀티엔 파타야,마사지 2시간,핵심일정 포함
+                  </p>
+                  <span><b>109,000</b>원~</span>
+                </a>
+                <a class="item" href="#">
+                  <img src="images/v3.jpg" alt="나트랑" title="나트랑" />
+                  <span>나트랑</span>
+                  <span>[10%쿠폰] 아동 동반 가족여행 강력 추천</span>
+                  <p>
+                    방콕/파타야 5일, 중대형기종(347석) 탑승, 24년 오픈 5성 윈덤
+                    좀티엔 파타야,마사지 2시간,핵심일정 포함
+                  </p>
+                  <span><b>109,000</b>원~</span>
+                </a>
               </div>
-              <!-- End 목록영역 -->
+              <!-- end 목록영역 -->
             </div>
             <div class="section_bts">
-              <a href="#"
-                >투어 홈 바로가기
+              <a href="#">
+                투어 홈 바로가기
                 <img
                   src="images/icon_linkArrow.svg"
-                  alt="투어 홈 바로가기"
+                  alt="더보기"
                   title="투어 홈 바로가기"
                 />
               </a>
             </div>
           </div>
-          <!-- Trip -->
+          <!-- trip -->
           <div></div>
-          <!-- Ticket -->
+          <!-- ticket -->
           <div></div>
-          <!-- Live -->
+          <!-- live -->
           <div></div>
         </div>
       </main>
       <!-- 하단 -->
       <footer>
+        <!-- 위에 헤더로 여기부분이 하단이라는걸 알려줌. 웹브라우저의 하단부분이라는걸 명시하고가는거 -->
         <div></div>
       </footer>
     </div>
+
+    <p>&nbsp;&nbsp;&nbsp;&nbsp; 안녕하시지ㅋ</p>
+    <h1>왕h1 임</h1>
+    <h2>왕 h2 임</h2>
+    <h3>왕 h3 임</h3>
+    <h4>왕 h4 임</h4>
+    <h5>왕 h5 임</h5>
+    <h6>왕 h6 임</h6>
+    <p>ㅋ뭘보노ㅋ</p>
+    <!-- 캬ㅑㅑㅑ -->
   </body>
 </html>
