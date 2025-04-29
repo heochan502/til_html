@@ -329,4 +329,4 @@ body {
 ## 7. css 살펴보기
 
 - margin (영역 바깥으로의 여백)
-  - margin-top은 오류가 발생할 수 있다
+  => margin-top은 오류가 발생할 수 있다
