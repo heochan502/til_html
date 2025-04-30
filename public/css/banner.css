@@ -1,0 +1,40 @@
+.banner {
+  position: relative;
+  margin-top: 30px;
+}
+.banner_slide {
+  display: flex;
+  gap: 25px;
+}
+
+.banner_list {
+  border-radius: 15px;
+  overflow: hidden;
+  /* overflow 넘치는 영역은 지운다. 
+  border를 이미지에 쓰면 이미지영역은 살아있고 보이는 이미지가 잘리기만함 */
+}
+
+.banner_list img {
+  width: 100%;
+  /* 위내용이 베너 리스트 이미지르르 창안에 100%율로 창밖으로 안나가게 하는거 */
+}
+
+.slide_bt {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.banner_left {
+  left: 0;
+  transform: translateX(-50%);
+  /* transform: rotate(); */
+}
+
+.banner_right {
+  right: 0;
+  transform: translateX(50%);
+}

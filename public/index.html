@@ -24,6 +24,7 @@
     <!-- stylesheet 선언하고 파일 경로 지정해주면서 style 불러오기 -->
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/banner.css" />
     <!-- 위에 헤더 불러오는 순서 중요 위의 방식대로 하나씩 불러온다 -->
     <!--  스타일 넣는 방식 2. style 함수로 따로 뺴서 
     <style> 
@@ -156,7 +157,7 @@
               <!-- 고정 메뉴 -->
               <ul class="nav">
                 <li><a href="#">홈</a></li>
-                <li><a href="#">투어</a></li>
+                <li><a href="#" class="focus">투어</a></li>
                 <li><a href="#">티켓</a></li>
               </ul>
             </div>
@@ -201,15 +202,17 @@
           <!-- <div></div> -->
           <!-- banner -->
           <div class="banner">
-            <div class="banner_list">
-              <a href="#"
-                ><img src="images/v1.png" alt="banner" title="배너1" />
-              </a>
-            </div>
-            <div class="banner_list">
-              <a href="#"
-                ><img src="images/v2.jpg" alt="banner" title="배너2" />
-              </a>
+            <div class="banner_slide">
+              <div class="banner_list">
+                <a href="#"
+                  ><img src="images/v1.png" alt="banner" title="배너1" />
+                </a>
+              </div>
+              <div class="banner_list">
+                <a href="#"
+                  ><img src="images/v2.jpg" alt="banner" title="배너2" />
+                </a>
+              </div>
             </div>
             <button class="slide_bt banner_left">
               <img src="images/slider_arrow.svg" alt="left" title="left" />
