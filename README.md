@@ -365,26 +365,28 @@ div {
 - 웹브라우저의 F12을 참조하자.
 - !importent는 정말 해결이 필요한 곳에만 활용
 
+## 6. 끌골 설정
 
-## 6. 끌골 설정 
-
-- 반드시 글꼴 설정 후 작업이 진행 되어야 합니다. 
-- 글자의 종류와 글자 간의 간격, 행간의 간격, 글꼴의 크기 등이 너비, 높이 등의 단위가 됩니다. 
+- 반드시 글꼴 설정 후 작업이 진행 되어야 합니다.
+- 글자의 종류와 글자 간의 간격, 행간의 간격, 글꼴의 크기 등이 너비, 높이 등의 단위가 됩니다.
 - body 셋팅을 위한 자료임.
-- 
+-
+
 ### 6.1. 글꼴 구하기
+
 - `웹폰트` 와 `로컬 폰트`의 구분 및 이해
 - 구글폰트 (https://fonts.google.com/)
 - 눈누 (https://noonnu.cc/font_page/pick)
 - 깃허브 (https://github.com/orioncactus/pretendard)
 - 아이콘폰트 (https://fontawesome.com/icons)
 
-### 6.2. 글꼴 활용하기 
+### 6.2. 글꼴 활용하기
 
 - css/common.css 참조
 
 ## 7. CSS 살펴보기
 
- - margin (영역 바깥으로의 여백)
-  - margin-top은 오류가 발생할 수 있다. 
+- margin (영역 바깥으로의 여백)
+- margin-top은 오류가 발생할 수 있다.
 
+## position을 꼭 기억하자.

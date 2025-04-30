@@ -66,8 +66,7 @@
   background-size: 18px; 
   아래는 단 2줄로 끝 */
   background: #f7f7f8 url("../images/btn_search.svg") no-repeat center;
-  background-size: 18px; 
-
+  background-size: 18px;
 }
 
 /* .search_form input[type="속성값"] 앞의 속성값이랑 같은거 찾아라 
@@ -79,14 +78,14 @@
 }
 .member {
   display: flex;
-  gap: 20px
+  gap: 20px;
 }
 .member > li > a {
- font-size: 12px;
- /* 아래 폰트 굵기 기본이 400 */
- font-weight: 700;
- color: #000000;
- line-height: 16px;
+  font-size: 12px;
+  /* 아래 폰트 굵기 기본이 400 */
+  font-weight: 700;
+  color: #000000;
+  line-height: 16px;
 }
 .header_bottom {
   width: 100%;
@@ -98,6 +97,16 @@
 .nav {
   display: flex;
 }
+
+.nav > li a {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  /* width: 100px;  틀을 제한하고 여백을 준것이 아님*/
+  padding: 0px 40px 0px 40px;
+  /* background-color: yellow; */
+}
+
 .header_bottom_eventmenu {
 }
 .cupon {
@@ -109,6 +118,17 @@
   display: flex;
   align-items: center;
 }
+
+/* 
+.box {
+  position :absolute;
+  left : 100px;
+  전체페이지에서 무조건 왼쪽 100px옆에 두고 박는거
+
+  width: 50px;
+  height: 50px;
+  background-color: rebeccapurple;
+} */
 
 /* .box_wrap {
     background-color: yellowgreen;
