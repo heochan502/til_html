@@ -97,10 +97,14 @@ aaa.속성2 =fucntion(){};
 
 // DOM 만 완성화면 됩니다. 기준으로 코드를 진행함.
 // div 기준영역을 잡는걸 권장한다.
+
+요소.on이벤트 = function () {};
 window.addEventListener("DOMContentLoaded", function () {
-  const header = this.document.querySelector(".header");
-  header.onclick = fucntion(){alert("방가워")};
-  console.log(header);
+
+const header = this.document.querySelector(".header");
+header.onclick = function () {
+    alert("반가워");
+};
 
   const logo = this.document.querySelector(".logo");
   console.log(logo);
@@ -121,8 +125,34 @@ window.addEventListener("DOMContentLoaded", function () {
 
 ```
 
-### 3. 요소에 이벤트 핸들러로 이벤트 작성하기
+### 3. 요소에 이벤트 핸들러로 이벤트 작성하기(표준)
 
 ```js
+요소.addEventListener("이벤트", function () {});
 
+const header = this.document.querySelector(".header");
+header.addEventListener("click", function () {
+  alert("표준 반가워");
+});
 ```
+
+### 4. 활용빈도가 높은 이벤트
+
+- `load` :
+- `DOMContentLoaded` :
+- `resize` : 웹브라우저 너비, 높이 변경시 발생
+- `scroll` : 웹브라우저에 스크롤이 일어나면 발생
+
+### 5. 활용빈도가 높은 `마우스 이벤트`
+
+- `click` : 마우스 클릭(왼쪽)
+- `mouseenter` : 마우스 커서가 요소에 걸쳐지면
+- `mouseleave` : 마우스 커서가 요소에서 벗어나면
+
+### 6. 활용빈도가 높은 `키보드 이벤트`
+
+- `keyup` : 키보드에서 키 입력 후 이벤트
+- `keydown` : 키보드에서 키 입력 후 이벤트
+- `keypress` : 키보드에서 키누르고 있으면 이벤트
+
+### 활용 빈도가 높은 Form 관련 이벤트 (추후 정리)
