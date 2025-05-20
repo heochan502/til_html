@@ -21,8 +21,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>나의 til</title>
 
-    <!-- stylesheet 선언하고 파일 경로 지정해주면서 style 불러오기 -->
+  <!--외부 라이브 러리-->
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- stylesheet 선언하고 파일 경로 지정해주면서 style 불러오기 -->
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/banner.css" />
@@ -30,6 +38,7 @@
     <!-- js 초기 코드-->
     <script src = "js/index.js"></script>
     <script src = "js/header.js"></script>
+    <script src = "js/banner.js"></script>
 
 
     <!-- 위에 헤더 불러오는 순서 중요 위의 방식대로 하나씩 불러온다 -->
@@ -213,8 +222,62 @@
           <!-- <div></div> -->
           <!-- banner -->
           <div class="banner">
+            <!--정대로 swiper단어 고치지 않는다-->
+            <div class="swiper sw_banner">
+              <div class="swiper-wrapper">
+                <!-- API 연동 아래 주석을 변경 하는 것-->
+                <!-- <div class="swiper-slide">
+                  <div class="banner_list">
+                    <a href="#">
+                      <img src="images/v1.png" alt="banner" title="배너" />
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="banner_list">
+                    <a href="#">
+                      <img src="images/v2.jpg" alt="banner" title="배너" />
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="banner_list">
+                    <a href="#">
+                      <img src="images/v1.png" alt="banner" title="배너" />
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="banner_list">
+                    <a href="#">
+                      <img src="images/v2.jpg" alt="banner" title="배너" />
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="banner_list">
+                    <a href="#">
+                      <img src="images/v1.png" alt="banner" title="배너" />
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="banner_list">
+                    <a href="#">
+                      <img src="images/v2.jpg" alt="banner" title="배너" />
+                    </a>
+                  </div>
+                </div> -->
+              
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+
             <div class="banner_slide">
-              <div class="banner_list">
+              
+              <!-- <div class="banner_list">
                 <a href="#"
                   ><img src="images/v1.png" alt="banner" title="배너1" />
                 </a>
@@ -223,7 +286,7 @@
                 <a href="#"
                   ><img src="images/v2.jpg" alt="banner" title="배너2" />
                 </a>
-              </div>
+              </div> -->
             </div>
             <button class="slide_bt banner_left">
               <img src="images/slider_arrow.svg" alt="left" title="left" />

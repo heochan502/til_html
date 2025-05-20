@@ -17,6 +17,7 @@
 window.addEventListener("DOMContentLoaded", function () {
   // 아래 구문은 header 변수를 만들고 html (document)에서 css 선택자로 값을 셋팅
   const header = this.document.querySelector(".header");
+  const header_top = this.document.querySelector(".header_top");
   //header.onclick = function () {
   //alert("반가워");
   //};
@@ -28,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const search = this.document.querySelector(".search");
   //console.log(search);
 
-  const headerNav = this.document.querySelector(".header_bottom_nav");
+  const headerNav = this.document.querySelector(".header_bottom");
   //console.log(headerNav);
 
   const eventMenu = this.document.querySelector(".header_bottom_eventmenu");
@@ -51,6 +52,9 @@ window.addEventListener("DOMContentLoaded", function () {
 
       //class 제거로 변경
       search.classList.remove("search_down");
+      memberMenu.classList.remove("member_down");
+      header.classList.remove("header_down");
+      header_top.classList.remove("header_down");
     } else {
       // console.log("일부만 보여라");
       // 로고를 CSS로 제어하겠다.
@@ -62,6 +66,9 @@ window.addEventListener("DOMContentLoaded", function () {
 
       //class 추가
       search.classList.add("search_down");
+      memberMenu.classList.add("member_down");
+      header.classList.add("header_down");
+      header_top.classList.add("header_down");
     }
     // console.log("스크롤 : " + scrollY);
   });

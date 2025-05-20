@@ -14,7 +14,9 @@
   border를 이미지에 쓰면 이미지영역은 살아있고 보이는 이미지가 잘리기만함 */
   /* background-color: blue; */
 }
-z
+.sw_banner {
+  border-radius: 15px;
+}
 
 /* 이미지가 영역에 가득 채워지고 비율이 유지되도록 처리 //복붙해서 써도됨 */
 .banner_list img {
@@ -40,11 +42,13 @@ z
   /* 그림자 적용하기  https://html-css-js.com/css/generator/box-shadow/ 여 사이트에서 만든다*/
   box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.13);
   cursor: pointer;
+  z-index: 100;
 }
 
 .banner_left {
   left: 0;
   transform: translateX(-50%) translateY(-50%) rotateY(180deg);
+
   /* transform: rotate(); */
 }
 
