@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "url": "#1",
+    "alt": "6월을 기대해",
+    "img": "api/banner/b1.png"
+  },
+  {
+    "id": 2,
+    "url": "#2",
+    "alt": "[NOL 페스티벌 - 티켓]",
+    "img": "api/banner/b2.png"
+  },
+  {
+    "id": 3,
+    "url": "#3",
+    "alt": "[NOL 페스티벌 - 국내여행]",
+    "img": "api/banner/b3.png"
+  },
+  {
+    "id": 4,
+    "url": "#4",
+    "alt": "[NOL 페스티벌 - 해외여행]",
+    "img": "api/banner/b4.png"
+  },
+  {
+    "id": 5,
+    "url": "#5",
+    "alt": "나의 세계를 놀랍게 NOL",
+    "img": "api/banner/b5.png"
+  },
+  {
+    "id": 6,
+    "url": "#6",
+    "alt": "인터파크TV_화요일",
+    "img": "api/banner/b6.png"
+  }
+]
