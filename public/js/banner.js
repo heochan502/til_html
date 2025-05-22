@@ -75,6 +75,6 @@ window.addEventListener("load", function () {
     });
   };
 
-  // 주소 호출
+  //함수 호출
   getData(dataUrl, makeHtml);
 });

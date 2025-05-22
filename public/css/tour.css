@@ -1,4 +1,5 @@
 .tour {
+  position: relative;
   margin-top: 65px;
 }
 
@@ -18,6 +19,7 @@
   color: rgba(0, 0, 0, 0.75);
 }
 .section_list {
+  position: relative;
 }
 .section_category {
   display: flex;
@@ -36,7 +38,6 @@
   padding: 15px 20px;
   border-radius: 52px;
   cursor: pointer;
-
   font-size: 14px;
   font-weight: 400;
 
@@ -50,8 +51,8 @@
 }
 
 .section_slide {
-  display: flex;
-  gap: 25px;
+  position: relative;
+
   margin-bottom: 20px;
 }
 .item {
@@ -63,13 +64,13 @@
 
 .item > a {
 }
-
 .item_image {
   width: 100%;
   height: 250px;
   overflow: hidden;
   margin-bottom: 25px;
 }
+
 .item_image > img {
   width: 100%;
   /* 비율을 유지하면서 영역에 이미지 가득 채우기 */
@@ -102,26 +103,21 @@
   display: block;
   font-size: 14px;
   font-weight: 400;
-
   color: #1769ff;
-
   /* 줄내림 방지 */
   white-space: nowrap;
-  /* 말줄임표 처리  */
+  /* 말줄임 처리 */
   overflow: hidden;
-  /* 위는 넘치면 자르고 텍스트가 넘치면 ... 표시 */
   text-overflow: ellipsis;
 }
 .item_desc {
   display: block;
-  width: 100%;
   font-size: 14px;
-  color: #333;
   font-weight: 400;
-
+  color: #333;
   /* 줄내림 방지 */
   white-space: nowrap;
-  /* 말줄임표 처리  */
+  /* 말줄임 처리 */
   overflow: hidden;
   /* 위는 넘치면 자르고 텍스트가 넘치면 ... 표시 */
   text-overflow: ellipsis;
@@ -130,10 +126,9 @@
   font-size: 16px;
   font-weight: 400;
 }
-.item_price b {
+.item_price > b {
   font-size: 20px;
   font-weight: 700;
-  color: #333333;
 }
 
 .section_bts {
@@ -145,16 +140,20 @@
   border: 1px solid #e5e5e5;
   padding: 20px 40px;
   border-radius: 40px;
-  background-color: #fff;
 
+  background-color: #fff;
   font-size: 16px;
   font-weight: 700;
+
   display: flex;
   align-items: center;
-
   gap: 5px;
-  cursor: pointer;
 }
 .section_bts > a > img {
-  transform: translateY(1);
+  transform: translateY(1px);
+}
+
+/* swiper 버튼 비활성시 표현 */
+.swiper-button-disabled {
+  display: none !important;
 }
