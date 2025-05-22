@@ -104,3 +104,26 @@ body {
   margin: 0 auto;
   /* background-color: skyblue; */
 }
+
+/* 반응형 작업 */
+
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: skyblue;
+  }
+}
+@media screen and (max-width: 960) {
+  body {
+    background-color: rgb(83, 16, 71);
+  }
+}
+@media screen and (max-width: 760px) {
+  body {
+    background-color: rgb(100, 55, 66);
+  }
+}
+@media screen and (max-width: 640px) {
+  body {
+    background-color: rgb(104, 148, 39);
+  }
+}

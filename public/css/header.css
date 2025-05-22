@@ -5,6 +5,7 @@
   /* height: 163px; */
   background-color: #ffffff; /*단축키 bc 각명령어 단어 앞에꺼 쓰면 나옴*/
   border-bottom: 1px solid #ebebeb;
+  z-index: 999;
 }
 
 .header_down {
@@ -12,7 +13,7 @@
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 999;
 }
 
 .header_top {
