@@ -29,14 +29,14 @@ window.addEventListener("DOMContentLoaded", function () {
   const search = this.document.querySelector(".search");
   //console.log(search);
 
-  const headerNav = this.document.querySelector(".header_bottom");
+  // const headerNav = this.document.querySelector(".header_bottom");
   //console.log(headerNav);
 
   const eventMenu = this.document.querySelector(".header_bottom_eventmenu");
   //console.log(eventMenu);
   const member = this.document.querySelector(".header_top_right");
   //console.log(member);
-  const banner = this.document.querySelector(".banner");
+  //const banner = this.document.querySelector(".banner");
 
   const main = this.document.querySelector(".main");
 
@@ -44,8 +44,9 @@ window.addEventListener("DOMContentLoaded", function () {
   this.window.addEventListener("scroll", function () {
     // 스크롤이 되었을 때 스크롤바의 Y 축의 상단 픽셀 위치값
     const scrollY = this.window.scrollY;
+
     const headerTopH = this.document.querySelector(".header_top");
-    console.log(headerTopH.offsetHeight);
+    //console.log(headerTopH.offsetHeight);
 
     // 만약 50보다 작으면 전체를 보이고, 그렇지 않으면 일부분을 숨긴다.
     if (scrollY <= headerTopH.offsetHeight) {
@@ -54,10 +55,10 @@ window.addEventListener("DOMContentLoaded", function () {
       eventMenu.style.display = "block";
 
       //class 제거로 변경
+      header.classList.remove("header_down");
+      header_top.classList.remove("header_top_down");
       search.classList.remove("search_down");
       member.classList.remove("member_down");
-      header.classList.remove("header_down");
-      header_top.classList.remove("header_down");
 
       // eventMenu.classList.removed("header_bottom_eventmenu");
       //banner.classList.remove("banner_fix");
@@ -71,12 +72,12 @@ window.addEventListener("DOMContentLoaded", function () {
       // search.style.position = "absolute";
       // search.style.left = "350px";
       // search.style.top = "48px";
-
       //class 추가
+      //header.classList.add("header_down");
+      header_top.classList.add("header_top_down");
       search.classList.add("search_down");
       member.classList.add("member_down");
-      header.classList.add("header_down");
-
+      return;
       // header_top.classList.add("header_down");
       //banner.classList.add("banner_fix");
       main.classList.add("main_fixed");
