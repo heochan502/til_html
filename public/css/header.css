@@ -25,14 +25,14 @@
   justify-content: space-between; /*여백을 사이에 넣어라*/
   align-items: center;
 
-  margin: 20px 0px;
+  padding: 20px 0px;
   /* 위랑 아래랑 같음 
   margin-top: 20px;
   margin-bottom: 20px; */
 }
 
 .header_top_down {
-  margin: 0px;
+  padding: 0px;
 }
 .header_top_left {
   display: flex;

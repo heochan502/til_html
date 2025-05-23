@@ -34,8 +34,9 @@ window.addEventListener("DOMContentLoaded", function () {
 
   const eventMenu = this.document.querySelector(".header_bottom_eventmenu");
   //console.log(eventMenu);
-  const memberMenu = this.document.querySelector(".header_top_right");
-  //console.log(memberMenu);
+  const member = this.document.querySelector(".header_top_right");
+  //console.log(member);
+  const banner = this.document.querySelector(".banner");
 
   // 윈도우에 스크롤(scroll 이벤트)이 일어난다면 기능을 작동하겠다.
   this.window.addEventListener("scroll", function () {
@@ -52,9 +53,10 @@ window.addEventListener("DOMContentLoaded", function () {
 
       //class 제거로 변경
       search.classList.remove("search_down");
-      memberMenu.classList.remove("member_down");
+      member.classList.remove("member_down");
       header.classList.remove("header_down");
       header_top.classList.remove("header_down");
+      banner.classList.remove("banner_fix");
     } else {
       // console.log("일부만 보여라");
       // 로고를 CSS로 제어하겠다.
@@ -66,9 +68,10 @@ window.addEventListener("DOMContentLoaded", function () {
 
       //class 추가
       search.classList.add("search_down");
-      memberMenu.classList.add("member_down");
+      member.classList.add("member_down");
       header.classList.add("header_down");
       header_top.classList.add("header_down");
+      banner.classList.add("banner_fix");
     }
     // console.log("스크롤 : " + scrollY);
   });
