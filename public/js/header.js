@@ -38,6 +38,8 @@ window.addEventListener("DOMContentLoaded", function () {
   //console.log(member);
   const banner = this.document.querySelector(".banner");
 
+  const main = this.document.querySelector(".main");
+
   // 윈도우에 스크롤(scroll 이벤트)이 일어난다면 기능을 작동하겠다.
   this.window.addEventListener("scroll", function () {
     // 스크롤이 되었을 때 스크롤바의 Y 축의 상단 픽셀 위치값
@@ -56,12 +58,16 @@ window.addEventListener("DOMContentLoaded", function () {
       member.classList.remove("member_down");
       header.classList.remove("header_down");
       header_top.classList.remove("header_down");
-      banner.classList.remove("banner_fix");
+
+      // eventMenu.classList.removed("header_bottom_eventmenu");
+      //banner.classList.remove("banner_fix");
+      main.classList.remove("main_fixed");
     } else {
       // console.log("일부만 보여라");
       // 로고를 CSS로 제어하겠다.
       logo.style.display = "none";
       eventMenu.style.display = "none";
+
       // search.style.position = "absolute";
       // search.style.left = "350px";
       // search.style.top = "48px";
@@ -70,8 +76,10 @@ window.addEventListener("DOMContentLoaded", function () {
       search.classList.add("search_down");
       member.classList.add("member_down");
       header.classList.add("header_down");
-      header_top.classList.add("header_down");
-      banner.classList.add("banner_fix");
+
+      // header_top.classList.add("header_down");
+      //banner.classList.add("banner_fix");
+      main.classList.add("main_fixed");
     }
     // console.log("스크롤 : " + scrollY);
   });

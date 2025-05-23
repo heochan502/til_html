@@ -89,12 +89,12 @@
         float: left;
       }
 
-      ul > li > a {
+      /* ul > li > a {
         background-color: rgb(255, 255, 255);
       }
       ul a {
         background-color: red;
-      }
+      } */
     </style>
 
     <!-- <ul class="menu">
@@ -213,7 +213,7 @@
         </div>
       </header>
       <!-- 메인 -->
-      <main>
+      <main class="main">
         <!-- 위에 헤더로 여기부분이 메일이라는걸 알려줌. 웹브라우저의 메인부분이라는걸 명시하고가는거 -->
         <div class="layout">
           <!-- event -->
@@ -282,10 +282,10 @@
                 </a>
               </div> -->
             </div>
-            <button class="slide_bt banner_left">
+            <button class="slide_bt banner_prev slide_left">
               <img src="images/slider_arrow.svg" alt="left" title="left" />
             </button>
-            <button class="slide_bt banner_right">
+            <button class="slide_bt banner_next slide_right">
               <img src="images/slider_arrow.svg" alt="right" title="right" />
             </button>
           </div>
@@ -317,11 +317,11 @@
                   <!-- <div class="swiper-button-next"></div>
                   <div class="swiper-button-prev"></div> -->
                 </div>
-                <button class="slide_bt banner_left tour_prev">
+                <button class="slide_bt banner_left tour_prev slide_left">
                   <img src="images/slider_arrow.svg" alt="left" title="left" />
                 </button>
 
-                <button class="slide_bt banner_right tour_next">
+                <button class="slide_bt banner_right tour_next slide_next">
                   <img
                     src="images/slider_arrow.svg"
                     alt="right"

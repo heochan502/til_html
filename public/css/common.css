@@ -13,10 +13,10 @@
 /* @import url("header.css");  헤더 참조 방법 이긴하지만 index에서 불러오는 걸 추천*/
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   outline-style: none; /*선택사항*/
-  box-sizing: border-box;
   /*  선택영역이 안보이게 하는거 커서나 선택이가면 어디 선택하고 있는지 보이게하는거 
     없애는거 outline-style: none; */
   /* 영역기준으로 모든걸 계산해서 테두리 그리는거/ 디자이너가 주는데로 이미지 박을려고 하는거
@@ -67,9 +67,6 @@ html {
 
 body {
   width: 100%; /*너비 가득 채워라*/
-  font-size: 1rem; /*전체 html에 지정해둔 수에서 배수 지금은 x1 인거고 xn이 가능*/
-  /* 디자인 보고 수정 */
-  color: #000000; /*본문의 글씨 색상은 검은색이다*/
   /* 글꼴이 필요로 함 . */
   /* font-family: "Ownglyph_ParkDaHyun", "Roboto", "Bagel Fat One", system-ui;
   font-weight: 400;
@@ -78,8 +75,72 @@ body {
   font-variation-settings: "wdth" 100; */
   font-family: "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem; /*전체 html에 지정해둔 수에서 배수 지금은 x1 인거고 xn이 가능*/
   letter-spacing: 0px;
+  /* 디자인 보고 수정 */
+  color: #000000; /*본문의 글씨 색상은 검은색이다*/
   word-spacing: 0px;
+}
+
+/* 반응형 작업 */
+@media screen and (max-width: 1280px) {
+  .layout {
+    max-width: 1024px;
+    background-color: skyblue;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .layout {
+    max-width: 760px;
+    background-color: hotpink;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .layout {
+    max-width: 100%;
+    background-color: greenyellow;
+  }
+}
+
+/* header가 fixed 가 되면 강제로 padding 넣기*/
+.main_fixed {
+  padding-top: 100px;
+}
+
+/* slide 관련 공통 */
+/* swiper 버튼 비활성시 표현 */
+.swiper-button-disabled {
+  display: none !important;
+}
+.slide_bt {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  /* transform: translateY(-50%); */
+  width: 50px;
+  height: 50px;
+  /* rgba를 쓰면 투명도조절 해서 반투명하게 만들수있다 그 반투명값음 1이 최대 */
+  background-color: rgba(255, 255, 255, 0.85);
+
+  border: 1px solid #e6e6e6;
+  border-radius: 50%;
+  /* 그림자 적용하기  https://html-css-js.com/css/generator/box-shadow/ 여 사이트에서 만든다*/
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.13);
+  cursor: pointer;
+}
+
+.slide_left {
+  left: 0;
+  transform: translateX(-50%) translateY(-50%) rotateY(180deg);
+
+  /* transform: rotate(); */
+}
+
+.slide_right {
+  right: 0;
+  transform: translateX(50%) translateY(-50%);
 }
 
 /* div.wrap {
@@ -90,11 +151,11 @@ body {
 }
 
 .layout {
-  max-width: 1280px;
   /* 위는 기존의width 만 써서 최대 길이만 지정해두고 아래 width : 100%안하면 그냥 잘려서보이는데 
   100%로 하게되면 화면안에 모든내용이나오고 최대길이가 저걸로 고정해두는거라서 내용이 짜부되더라도 나오긴함 
   반응형에서 사용하는 구문  min-width: 1024px; */
   width: 100%;
+  max-width: 1280px;
   /* 화면 중앙에 오게 하기 1*/
   /* margin-top: 0;
   margin-bottom: 0;
@@ -103,13 +164,6 @@ body {
   /* 화면 중앙에 오게 하기 2 margin: 위아래 양옆  */
   margin: 0 auto;
   /* background-color: skyblue; */
-}
-
-/* 반응형 작업 */
-@media screen and (max-width: 1080px) {
-  body {
-    background-color: rgb(203, 172, 230);
-  }
 }
 
 @media screen and (max-width: 1024px) {
