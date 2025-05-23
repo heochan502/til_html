@@ -51,10 +51,10 @@ window.addEventListener("DOMContentLoaded", function () {
       eventMenu.style.display = "block";
 
       //class 제거로 변경
+      header.classList.remove("header_down");
+      header_top.classList.remove("header_top_down");
       search.classList.remove("search_down");
       memberMenu.classList.remove("member_down");
-      header.classList.remove("header_down");
-      header_top.classList.remove("header_down");
     } else {
       // console.log("일부만 보여라");
       // 로고를 CSS로 제어하겠다.
@@ -65,10 +65,10 @@ window.addEventListener("DOMContentLoaded", function () {
       // search.style.top = "48px";
 
       //class 추가
+      header.classList.add("header_down");
+      header_top.classList.add("header_top_down");
       search.classList.add("search_down");
       memberMenu.classList.add("member_down");
-      header.classList.add("header_down");
-      header_top.classList.add("header_down");
     }
     // console.log("스크롤 : " + scrollY);
   });

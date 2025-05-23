@@ -52,7 +52,7 @@
 .search_down {
   position: absolute;
   left: 350px;
-  top: 30px;
+  top: 10px;
 }
 .search_form {
   display: flex;
@@ -107,7 +107,7 @@
 .member_down {
   position: absolute;
   right: 0;
-  top: 50px;
+  top: 30px;
 }
 
 .member > li > a {
