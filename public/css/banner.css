@@ -12,8 +12,8 @@
 }
 
 .banner_list {
-  border-radius: 15px;
   overflow: hidden;
+  border-radius: 15px;
   /* overflow 넘치는 영역은 지운다. 
   border를 이미지에 쓰면 이미지영역은 살아있고 보이는 이미지가 잘리기만함 */
   /* background-color: blue; */
@@ -24,39 +24,42 @@
 
 /* 이미지가 영역에 가득 채워지고 비율이 유지되도록 처리 //복붙해서 써도됨 */
 .banner_list img {
+  display: block;
   width: 100%;
   /* 내용이 베너 리스트 이미지를 창안에 100%율로 창밖으로 안나가게 하는거 */
   height: 100%;
   /* 비율을 유지하면서 영역에 이미지 가득채우기 */
   object-fit: cover;
-  display: block;
 }
-
-.slide_bt {
-  position: absolute;
-  top: 50%;
-  /* transform: translateY(-50%); */
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-
-  border: 1px solid #e6e6e6;
-  /* rgba를 쓰면 투명도조절 해서 반투명하게 만들수있다 그 반투명값음 1이 최대 */
-  background-color: rgba(255, 255, 255, 0.85);
-  /* 그림자 적용하기  https://html-css-js.com/css/generator/box-shadow/ 여 사이트에서 만든다*/
-  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.13);
-  cursor: pointer;
-  z-index: 100;
+/*반응형 코드*/
+.sw_banner_pg {
+  bottom: -25px !important;
+  display: none;
 }
-
-.banner_left {
-  left: 0;
-  transform: translateX(-50%) translateY(-50%) rotateY(180deg);
-
-  /* transform: rotate(); */
+@media all and (max-width: 1024px) {
+  .sw_banner_pg {
+    display: block;
+  }
+  /*평상시 버튼 모습*/
+  .sw_banner_pg .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    opacity: 0.4;
+    background-color: #fff !important;
+  }
+  /*포커스시 버튼 모습*/
+  .sw_banner_pg .swiper-pagination-bullet-active {
+    width: 7px;
+    height: 7px;
+    opacity: 1;
+    background-color: #fff !important;
+  }
 }
-
-.banner_right {
-  right: 0;
-  transform: translateX(50%) translateY(-50%);
+@media all and (max-width: 960px) {
+  .sw_banner {
+    width: 350px;
+  }
+  .sw_banner_pg {
+    bottom: 10px !important;
+  }
 }

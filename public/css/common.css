@@ -82,43 +82,59 @@ body {
   word-spacing: 0px;
 }
 
+.wrap {
+  width: 100%;
+}
+
+.layout {
+  /* 위는 기존의width 만 써서 최대 길이만 지정해두고 아래 width : 100%안하면 그냥 잘려서보이는데 
+  100%로 하게되면 화면안에 모든내용이나오고 최대길이가 저걸로 고정해두는거라서 내용이 짜부되더라도 나오긴함 
+  반응형에서 사용하는 구문  min-width: 1024px; */
+  width: 100%;
+  max-width: 1280px;
+  /* 화면 중앙에 오게 하기 1*/
+  /* margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto; */
+  /* 화면 중앙에 오게 하기 2 margin: 위아래 양옆  */
+  margin: 0 auto;
+  /* background-color: skyblue; */
+}
+
 /* 반응형 작업 */
 @media screen and (max-width: 1280px) {
   .layout {
     max-width: 1024px;
-    background-color: skyblue;
+    /* background-color: skyblue; */
   }
 }
 
 @media screen and (max-width: 1024px) {
   .layout {
     max-width: 760px;
-    background-color: hotpink;
+    /* background-color: hotpink; */
   }
 }
 
 @media screen and (max-width: 760px) {
   .layout {
     max-width: 100%;
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
   }
 }
 
 /* header가 fixed 가 되면 강제로 padding 넣기*/
 .main_fixed {
-  padding-top: 100px;
+  padding-top: 150px;
 }
-
 /* slide 관련 공통 */
 /* swiper 버튼 비활성시 표현 */
-.swiper-button-disabled {
-  display: none !important;
-}
 .slide_bt {
   position: absolute;
   top: 50%;
   z-index: 100;
-  /* transform: translateY(-50%); */
+  transform: translateY(50%);
   width: 50px;
   height: 50px;
   /* rgba를 쓰면 투명도조절 해서 반투명하게 만들수있다 그 반투명값음 1이 최대 */
@@ -142,47 +158,31 @@ body {
   right: 0;
   transform: translateX(50%) translateY(-50%);
 }
+.swiper-button-disabled {
+  display: none !important;
+}
 
 /* div.wrap {
 } */
 /*위아래 같다 */
-.wrap {
-  width: 100%;
-}
-
-.layout {
-  /* 위는 기존의width 만 써서 최대 길이만 지정해두고 아래 width : 100%안하면 그냥 잘려서보이는데 
-  100%로 하게되면 화면안에 모든내용이나오고 최대길이가 저걸로 고정해두는거라서 내용이 짜부되더라도 나오긴함 
-  반응형에서 사용하는 구문  min-width: 1024px; */
-  width: 100%;
-  max-width: 1280px;
-  /* 화면 중앙에 오게 하기 1*/
-  /* margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto; */
-  /* 화면 중앙에 오게 하기 2 margin: 위아래 양옆  */
-  margin: 0 auto;
-  /* background-color: skyblue; */
-}
 
 @media screen and (max-width: 1024px) {
   body {
-    background-color: skyblue;
+    /* background-color: skyblue; */
   }
 }
 @media screen and (max-width: 960) {
   body {
-    background-color: rgb(83, 16, 71);
+    /* background-color: rgb(83, 16, 71); */
   }
 }
 @media screen and (max-width: 760px) {
   body {
-    background-color: rgb(100, 55, 66);
+    /* background-color: rgb(100, 55, 66); */
   }
 }
 @media screen and (max-width: 640px) {
   body {
-    background-color: rgb(104, 148, 39);
+    /* background-color: rgb(104, 148, 39); */
   }
 }

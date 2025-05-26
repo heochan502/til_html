@@ -77,11 +77,18 @@ window.addEventListener("DOMContentLoaded", function () {
       header_top.classList.add("header_top_down");
       search.classList.add("search_down");
       member.classList.add("member_down");
-      return;
+      // return;
       // header_top.classList.add("header_down");
       //banner.classList.add("banner_fix");
-      main.classList.add("main_fixed");
+      //main.classList.add("main_fixed");
     }
     // console.log("스크롤 : " + scrollY);
   });
 });
+
+// 진짜 반응형은 가로가 변한만큼 세로가 변하는게 아니고 가로 비율에 맞춰서 변하는것
+// 가로 1280
+//      배너 너비는 630 이다.
+//      베너 세로는 350 이다.
+// 그렇다면 가로대비 배너 너비는 몇 % 인가. 가로대비 배너 너비는 몇 % 인가 ? 630/1280 * 100 = 49.21 % max-width : 630
+//                                     가로대비 배너 높이는 몇 % 인가 ? 350/1280 * 100 = 27.33 %

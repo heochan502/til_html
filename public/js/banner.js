@@ -53,7 +53,7 @@ window.addEventListener("load", function () {
       speed: 1500,
       loop: true,
       pagination: {
-        el: ".sw_banner .swiper-pagination",
+        el: ".sw_banner_pg",
         clickable: true,
       },
       navigation: {
@@ -63,6 +63,23 @@ window.addEventListener("load", function () {
       autoplay: {
         delay: 2500,
         disableOnInteraction: false,
+      },
+      // 화면에 해상도에 따라서 작동
+      breakpoints: {
+        //760 이상이면
+        760: {
+          slidesPerView: 1,
+          spaceBetween: 25,
+        },
+        960: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
+        // 1024 이상이면
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
       },
     });
 

@@ -39,6 +39,12 @@
     <script src="js/banner.js"></script>
     <script src="js/tour.js"></script>
 
+    <!--     
+    <p>내용</p>
+    <br />: 닫힌 태그(close)
+    <img />: 닫힌 태그(close)
+    <input />: 닫힌 태그(close) -->
+
     <!-- 위에 헤더 불러오는 순서 중요 위의 방식대로 하나씩 불러온다 -->
     <!--  스타일 넣는 방식 2. style 함수로 따로 뺴서 
     <style> 
@@ -174,7 +180,7 @@
             <div class="header_bottom_nav">
               <!-- 고정 메뉴 -->
               <ul class="nav">
-                <li><a href="#">홈</a></li>
+                <li class="home"><a href="#">홈</a></li>
                 <li><a href="#" class="focus">투어</a></li>
                 <li><a href="#">티켓</a></li>
               </ul>
@@ -212,6 +218,21 @@
           </div>
         </div>
       </header>
+      <!--모바일 상단-->
+      <div class="m_header">
+        <div class="m_header_menu">
+          <a href="#">홈</a>
+          <a href="#">투어</a>
+          <a href="#">티켓</a>
+        </div>
+
+        <div class="m_header_search">
+          <a href="#">
+            <img src="images/btn_search.svg" alt="제품검색" />
+          </a>
+        </div>
+      </div>
+
       <!-- 메인 -->
       <main class="main">
         <!-- 위에 헤더로 여기부분이 메일이라는걸 알려줌. 웹브라우저의 메인부분이라는걸 명시하고가는거 -->
@@ -267,8 +288,8 @@
                   </div>
                 </div> -->
               </div>
-              <div class="swiper-pagination"></div>
             </div>
+            <div class="swiper-pagination sw_banner_pg"></div>
 
             <div class="banner_slide">
               <!-- <div class="banner_list">
@@ -321,7 +342,7 @@
                   <img src="images/slider_arrow.svg" alt="left" title="left" />
                 </button>
 
-                <button class="slide_bt banner_right tour_next slide_next">
+                <button class="slide_bt banner_right tour_next slide_right">
                   <img
                     src="images/slider_arrow.svg"
                     alt="right"
