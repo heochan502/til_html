@@ -63,37 +63,39 @@
   </head>
   <body>
     <style>
+      /*
       #gogo {
         background-color: brown;
       }
       .box_wrap {
         background-color: hotpink;
-      }
-      /*위에서 css 에서 불러오고 난뒤에 html 에서 적용하면 html이 우선됨 
-      위에서는 파일 연결한다고 파일에서 불러온값 입히고 다시 html에서 입혀서 여기가 우선인듯 
+      }*/
+      /*위에서 css 에서 불러오고 난뒤에 html 에서 적용하면 html이 우선됨
+      위에서는 파일 연결한다고 파일에서 불러온값 입히고 다시 html에서 입혀서 여기가 우선인듯
       div {
         background-color: rgb(255, 255, 255);
       } */
 
-      .box_wrap {
+      /* .box_wrap {
         display: block;
-        /* border: 3px solid rgb(211, 62, 62); */
-      }
+        <!-- border: 3px solid rgb(211, 62, 62); -->
+      } */
+      /*
       .clearboth::after
-      /*  .box_wrap::after box_wrap의 영역안의 마지막 부분을 after
-      맨처음을 before로 지정 가능하다. float: left;가 있으면 앞으로 안가고 맨뒤로 가게 된다 새로운 것은 무조건 왼쪽으로 붙여서*/ {
+        .box_wrap::after box_wrap의 영역안의 마지막 부분을 after
+      맨처음을 before로 지정 가능하다. float: left;가 있으면 앞으로 안가고 맨뒤로 가게 된다 새로운 것은 무조건 왼쪽으로 붙여서 {
         content: "";
         display: block;
         width: 100%;
         clear: both;
-        /* clear:both 는 float : left 를 못붙이게 하는거 */
-      }
-      .box {
+        /* clear:both 는 float : left 를 못붙이게 하는거 
+      }*/
+      /* .box {
         display: none;
         width: 50px;
         border: 3px solid black;
         float: left;
-      }
+      } */
 
       /* ul > li > a {
         background-color: rgb(255, 255, 255);
@@ -235,6 +237,11 @@
 
       <!-- 메인 -->
       <main class="main">
+        <!-- 자연스러운 반응형 계산법 // 안내창 -->
+        <!-- <div class="popup">
+          <div class="popup_content">내용</div>
+        </div> -->
+        <!-- 자연스러운 반응형 계산법 // 안내창  -->
         <!-- 위에 헤더로 여기부분이 메일이라는걸 알려줌. 웹브라우저의 메인부분이라는걸 명시하고가는거 -->
         <div class="layout">
           <!-- event -->
@@ -328,27 +335,32 @@
                   <li><button>투어/입장권</button></li> -->
                 </ul>
               </div>
-
-              <div class="section_slide">
-                <!-- Swipe 투어 영역 -->
-                <div class="swiper sw_tour">
-                  <div class="swiper-wrapper">
-                    <!-- API 연동 -->
-                  </div>
-                  <!-- <div class="swiper-button-next"></div>
+              <div class="section_slide_wrap">
+                <div class="section_slide">
+                  <!-- Swipe 투어 영역 -->
+                  <div class="swiper sw_tour">
+                    <div class="swiper-wrapper">
+                      <!-- API 연동 -->
+                    </div>
+                    <!-- <div class="swiper-button-next"></div>
                   <div class="swiper-button-prev"></div> -->
-                </div>
-                <button class="slide_bt banner_left tour_prev slide_left">
-                  <img src="images/slider_arrow.svg" alt="left" title="left" />
-                </button>
+                  </div>
+                  <button class="slide_bt banner_left tour_prev slide_left">
+                    <img
+                      src="images/slider_arrow.svg"
+                      alt="left"
+                      title="left"
+                    />
+                  </button>
 
-                <button class="slide_bt banner_right tour_next slide_right">
-                  <img
-                    src="images/slider_arrow.svg"
-                    alt="right"
-                    title="right"
-                  />
-                </button>
+                  <button class="slide_bt banner_right tour_next slide_right">
+                    <img
+                      src="images/slider_arrow.svg"
+                      alt="right"
+                      title="right"
+                    />
+                  </button>
+                </div>
               </div>
               <!--End 추후 JSON 데이터 연동으로 변경 예정 -->
               <!--End 추후 JSON 데이터 연동으로 변경 예정 -->

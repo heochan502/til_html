@@ -48,6 +48,10 @@ ul {
 }
 html {
   width: 100%; /*너비 가득 채워라*/
+  /*반응형 최소 너비 설정*/
+  min-width: 540px;
+  /*가로 스크롤은 UI 상좋지 않아용*/
+  overflow-x: hidden;
   /*디자인 보고 수정*/
   font-size: 12px; /*글자 기본 크기 대중적으로 사용하는 크기(16)*/
 }
@@ -134,7 +138,6 @@ body {
   position: absolute;
   top: 50%;
   z-index: 100;
-  transform: translateY(50%);
   width: 50px;
   height: 50px;
   /* rgba를 쓰면 투명도조절 해서 반투명하게 만들수있다 그 반투명값음 1이 최대 */
@@ -144,6 +147,7 @@ body {
   border-radius: 50%;
   /* 그림자 적용하기  https://html-css-js.com/css/generator/box-shadow/ 여 사이트에서 만든다*/
   box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.13);
+  transform: translateY(50%);
   cursor: pointer;
 }
 
@@ -186,3 +190,45 @@ body {
     /* background-color: rgb(104, 148, 39); */
   }
 }
+
+/* 자연스러운 반응형 계산법 */
+/* .box_wrap {
+  /* position: relative;
+  width: 100%;
+  max-width: 1280px; */
+/*margin: 0 auto;
+  background-color: hotpink;
+} */
+
+/* 자연스러운 반응형 계산법 // 팝업창*/
+/* .popup {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /*아래처럼 해도됨*/
+/*
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99999999999999;
+}
+.popup_content {
+  position: relative;
+  max-width: 650px;
+  width: 50.78vw;
+  max-height: 400px;
+  height: 31.25vw;
+  background-color: yellowgreen;
+  margin: 0 auto;
+}
+
+.box {
+  position: relative;
+  width: 50.78vw; */
+/*
+  max-height: 400px;
+  max-width: 650px;
+  height: 31.25vw;
+
+  background-color: yellowgreen;
+}*/

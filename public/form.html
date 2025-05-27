@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+  </head>
+  <body>
+    <div class="join_form">
+      <h2>회원가입</h2>
+      <!-- method 정보 보이고싶으면 get  // post로하면 가려짐-->
+      <form action="member_join.jsp" method="get">
+        <!-- <input type="text" name="user" />
+        <input type="password" name="pass" />
+        <input type="submit" /> -->
+        <!-- -->
+        <fieldset>
+          <legend>기본정보</legend>
+          <label for="userid">아이디</label>
+          <!-- required 필수 항복이다 !라는 뜻-->
+          <input
+            id="userid"
+            name="userid"
+            type="text"
+            minlength="8"
+            maxlength="16"
+            required
+          />
+          <button>아이디 중복확인</button>
+          <br />
+          <label for="pass">비밀번호</label>
+          <input
+            id="pass"
+            name="pass"
+            type="password"
+            minlength="8"
+            maxlength="16"
+            required
+          />
+
+          <label for="pass2">비밀번호 확인</label>
+          <input
+            id="pass2"
+            type="password"
+            minlength="8"
+            maxlength="16"
+            required
+          />
+          <br />
+          <label>이름</label>
+          <input type="text" name="name" required />
+
+          <br />
+          <label>이메일</label>
+          <input type="email" name="email" required />
+          <br />
+          <label>성별</label>
+          <input type="radio" name="gender" value="male" checked />남성
+
+          <input type="radio" name="gender" value="female" />여성
+          <br />
+          <label>생년월일</label>
+          <input type="date" name="birthday" />
+          <br />
+          <label>이용약관</label>
+          <textarea readonly>이용약관이에요.</textarea>
+          <br />
+          <label>이용약관동의</label>
+          <input type="checkbox" name="agree" />
+          <br />
+          <!--크기같은건 js에서 관리하고 해야한다고함-->
+          <label>파일(5MB이하 안됨)</label>
+          <input type="file" name="file" />
+        </fieldset>
+
+        <fieldset>
+          <legend>부가정보</legend>
+          <label>지역</label>
+          <select name="city">
+            <option value="dg">대구</option>
+            <option value="se">서울</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <!--버튼-->
+          <input type="reset" value="재작성" />
+          <input type="submit" value="회원가입" />
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
